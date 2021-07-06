@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}News{% endblock %}
+
+{% block body %}
+    <h1>News</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ news.id }}</td>
+            </tr>
+            <tr>
+                <th>Author</th>
+                <td>{{ news.author }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ news.title }}</td>
+            </tr>
+            <tr>
+                <th>Summary</th>
+                <td>{{ news.summary }}</td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td>{{ news.content }}</td>
+            </tr>
+            <tr>
+                <th>Link</th>
+                <td>{{ news.link }}</td>
+            </tr>
+            <tr>
+                <th>Image1</th>
+                <td>{{ news.image1 }}</td>
+            </tr>
+            <tr>
+                <th>Image2</th>
+                <td>{{ news.image2 }}</td>
+            </tr>
+            <tr>
+                <th>Video1</th>
+                <td>{{ news.video1 }}</td>
+            </tr>
+            <tr>
+                <th>Video2</th>
+                <td>{{ news.video2 }}</td>
+            </tr>
+            <tr>
+                <th>Tag</th>
+                <td>{{ news.tag }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ news.createdAt ? news.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('news_index') }}">back to list</a>
+
+    <a href="{{ path('news_edit', {'id': news.id}) }}">edit</a>
+
+    {{ include('news/_delete_form.html.twig') }}
+{% endblock %}
