@@ -71,4 +71,6 @@ composer require --dev symfony/profiler-pack
 https://www2.itroom.fr/composant-mailer-symfony-5-4-avec-ovh/
 
 
+#### Force la mise-à-jour des tables à partir des entitées
 
+php bin/console doctrine:schema:update --force

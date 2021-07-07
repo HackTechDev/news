@@ -24,70 +24,70 @@ class News
     /**
      * @var string
      *
-     * @ORM\Column(name="author", type="string", length=255, nullable=false)
+     * @ORM\Column(name="author", type="string", length=255, nullable=true)
      */
     private $author;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="title", type="string", length=255, nullable=false)
+     * @ORM\Column(name="title", type="string", length=255, nullable=true)
      */
     private $title;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="summary", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="summary", type="text", length=65535, nullable=true)
      */
     private $summary;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="content", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="content", type="text", length=65535, nullable=true)
      */
     private $content;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="link", type="string", length=255, nullable=false)
+     * @ORM\Column(name="link", type="string", length=255, nullable=true)
      */
     private $link;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="image1", type="string", length=255, nullable=false)
+     * @ORM\Column(name="image1", type="string", length=255, nullable=true)
      */
     private $image1;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="image2", type="string", length=255, nullable=false)
+     * @ORM\Column(name="image2", type="string", length=255, nullable=true)
      */
     private $image2;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="video1", type="string", length=255, nullable=false)
+     * @ORM\Column(name="video1", type="string", length=255, nullable=true)
      */
     private $video1;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="video2", type="string", length=255, nullable=false)
+     * @ORM\Column(name="video2", type="string", length=255, nullable=true)
      */
     private $video2;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="tag", type="string", length=255, nullable=false)
+     * @ORM\Column(name="tag", type="string", length=255, nullable=true)
      */
     private $tag;
 

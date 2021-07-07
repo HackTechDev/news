@@ -4,11 +4,10 @@
 
 {% block body %}
 <style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+
 </style>
 
-<div class="example-wrapper">
+<div class="">
     <h1>News</h1>
 
 
@@ -20,10 +19,8 @@
                 <th>Résumé</th>
                 <th>Lien</th>
                 <th>Image</th>
-                <th>Video</th>
                 <th>Label</th>
                 <th>Publié le</th>
-                <th></th>
             </tr>
         </thead>
         <tbody>
@@ -32,14 +29,10 @@
                 <td>{{ news.author }}</td>
                 <td>{{ news.title }}</td>
                 <td>{{ news.summary }}</td>
-                <td>{{ news.link }}</td>
-                <td>{{ news.image1 }}</td>
-                <td>{{ news.video1 }}</td>
+                <td><a href="{{ news.link }}" target="_blank">{{ news.link }}</a></td>
+                <td><img src="{{ news.image1 }}" width="150px"></td>
                 <td>{{ news.tag }}</td>
-                <td>{{ news.createdAt ? news.createdAt|date('Y-m-d H:i:s') : '' }}</td>
-                <td>
-                    <a href="{{ path('news_show', {'id': news.id}) }}">show</a>
-                </td>
+                <td>{{ news.createdAt ? news.createdAt|date('d-m-Y') : '' }}</td>
             </tr>
         {% else %}
             <tr>
