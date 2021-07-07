@@ -7,14 +7,13 @@
 
 </style>
 
-<div class="">
+<div class="container mt-5">
     <h1>News</h1>
 
 
     <table class="table">
         <thead>
             <tr>
-                <th>Auteur</th>
                 <th>Titre</th>
                 <th>Résumé</th>
                 <th>Lien</th>
@@ -26,7 +25,6 @@
         <tbody>
         {% for news in news %}
             <tr>
-                <td>{{ news.author }}</td>
                 <td>{{ news.title }}</td>
                 <td>{{ news.summary }}</td>
                 <td><a href="{{ news.link }}" target="_blank">{{ news.link }}</a></td>
@@ -43,4 +41,5 @@
     </table>
     
 </div>
+
 {% endblock %}
