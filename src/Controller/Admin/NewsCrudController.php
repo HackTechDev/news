@@ -19,6 +19,7 @@ class NewsCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
         return [
+            IdField::new('id')->setLabel('ID')->setFormTypeOption('disabled','disabled'),
             TextField::new('author')->setLabel('Auteur'),
             TextField::new('title')->setLabel('Titre'),
             TextField::new('summary')->setLabel('Résumé'),

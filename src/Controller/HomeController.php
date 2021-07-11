@@ -16,7 +16,10 @@ class HomeController extends AbstractController
     {
         $news = $this->getDoctrine()
             ->getRepository(News::class)
-            ->findAll();
+            ->findBy(
+                array(),
+                array('id' => 'DESC')
+              ); 
 
         return $this->render('home/index.html.twig', [
             'news' => $news,
